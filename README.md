@@ -1,3 +1,32 @@
+https://alligator.io/angular/deploying-angular-app-github-pages/
+First install the angular-cli-ghpages globally:
+
+$ npm install -g angular-cli-ghpages
+
+Now use the Angular CLI with the --base-href flag to build your project and set the correct base href location:
+
+$ ng build --prod --base-href "https://<user-name>.github.io/<repo>/"
+  
+Then it’s as simple as running angular-cli-ghpages. You can use the ngh shorthand:
+
+$ ngh
+
+And done! Your app will now be hosted at https://username.github.io/app-name/
+
+You can optionally add a message to the commit when deploying:
+
+$ ngh --message="First deploy"
+
+You can also specify which branch to deploy:
+
+$ ngh --branch=production
+
+And finally, you can always do a dry run before actually deploying to see the output:
+
+$ ngh --dry-run
+
+
+
 # Ang8
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.2.
